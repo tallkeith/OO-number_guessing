@@ -10,7 +10,8 @@ class Game
   def play
     answer = rand(@max)
     puts "Please guess a number between 1 and #{@max}."
-    guess = @player.get_guess(@max)
+    binding.pry
+    guess = @player.pick
     puts "They guessed: #{guess}"
     until guess == answer
       sleep 0.25
@@ -19,7 +20,7 @@ class Game
       else
         puts "Too Low, guess again."
       end
-      guess = @player.get_guess(@max)
+      guess = @player.pick
       puts "They guessed: #{guess}"
     end
     puts "Congratulations."
