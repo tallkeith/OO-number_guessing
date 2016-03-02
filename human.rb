@@ -1,5 +1,5 @@
 class Human
-  def get_guess(max)
+  def pick
     gets.chomp.to_i
   end
 end
